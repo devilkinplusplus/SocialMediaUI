@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { MainModule } from "../../components/main/main.module";
+import { UikitModule } from "../../components/uikit/uikit.module";
 
 
 
@@ -21,7 +22,8 @@ import { MainModule } from "../../components/main/main.module";
     ],
     imports: [
         CommonModule, RouterModule,
-        MainModule
+        MainModule,
+        UikitModule
     ]
 })
 export class ComponentsModule { }
