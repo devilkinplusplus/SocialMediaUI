@@ -1,1 +1,55 @@
-<p>register works!</p>
+<div class="bg-con-white h-auto py-10 px-10 my-10">
+  <div class="flex justify-evenly items-center space-x-6">
+    <!-- Logo -->
+    <div class="wrapper">
+      <h1>Connectfy</h1>
+    </div>
+    <!-- Form  -->
+    <div class="bg-white h-auto text-base py-8 px-20 rounded-xl">
+      <p class="text-2xl text-con-darker-purple">Your next adventure starts here</p>
+      <form class="flex flex-col space-y-1 items-start justify-start text-gray-500">
+
+        <div class="flex flex-col mt-2">
+          <label for="firstName" class="text-gray-400 pl-0.5">FirstName</label>
+          <input type="text" id="firstName" placeholder="Your name.."
+          class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300" autocomplete="off">
+        </div>
+
+        <div class="flex flex-col mt-2">
+          <label for="lastName" class="text-gray-400 pl-0.5">LastName</label>
+          <input type="text" id="lastName" placeholder="Your lastname.."
+            class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300" autocomplete="off">
+        </div>
+
+        <div class="flex flex-col mt-2">
+          <label for="email" class="text-gray-400 pl-0.5">Email</label>
+          <input type="email" id="email" placeholder="example@gmail.com"
+          class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300" autocomplete="off">
+        </div>
+
+        <div class="flex flex-col mt-2">
+          <label label for="userName" class="text-gray-400 pl-0.5">Pick a username</label>
+          <input type="text" id="userName" placeholder="Set username.."
+            class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300" autocomplete="off">
+        </div>
+
+        <div class="flex flex-col mt-2">
+          <label for="password" class="text-gray-400 pl-0.5">Password</label>
+          <input type="password" id="password" placeholder="Password.."
+          class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300" autocomplete="off">
+        </div>
+
+        <br>
+        <div class="flex-grow w-full text-con-white">
+          <button type="button" class="bg-con-darker-purple text-white rounded-xl flex items-center justify-between
+                                       py-2 px-6 hover:bg-con-bright-purple ml-auto duration-300">
+            Let's goo! <i class="fas fa-circle-right ml-2"></i>
+          </button>
+        </div>
+
+
+      </form>
+    </div>
+
+  </div>
+</div>
