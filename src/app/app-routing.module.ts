@@ -4,11 +4,13 @@ import { MainComponent } from './home/components/main/main.component';
 import { LoginComponent } from './home/components/login/login.component';
 import { RegisterComponent } from './home/components/register/register.component';
 import { LayoutComponent } from './home/layout/layout.component';
+import { ExploreComponent } from './home/components/uikit/explore/explore.component';
 
 const routes: Routes = [
-  { path: '' , component: LayoutComponent ,
+  { path: '' , component: LayoutComponent,
     children:[
-      { path:'',component:MainComponent,pathMatch:'full'},
+      { path: '', component : MainComponent, pathMatch:'full'},
+      { path: "explore" , component : ExploreComponent }
     ]
   },
   { path: 'login', component: LoginComponent },

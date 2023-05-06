@@ -4,6 +4,9 @@ import { SettingsComponent } from './settings/settings.component';
 import { BadgesComponent } from './badges/badges.component';
 import { RequestsComponent } from './requests/requests.component';
 import { SuggestedsComponent } from './suggesteds/suggesteds.component';
+import { ExploreComponent } from './explore/explore.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,16 +15,18 @@ import { SuggestedsComponent } from './suggesteds/suggesteds.component';
     SettingsComponent,
     BadgesComponent,
     RequestsComponent,
-    SuggestedsComponent
+    SuggestedsComponent,
+    ExploreComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,MatDividerModule,RouterModule
   ],
   exports:[
     SettingsComponent,
     BadgesComponent,
     RequestsComponent,
-    SuggestedsComponent
+    SuggestedsComponent,
+    ExploreComponent
   ]
 })
 export class UikitModule { }
