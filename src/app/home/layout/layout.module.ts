@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { ComponentsModule } from './components/components.module';
 import {MatDividerModule} from '@angular/material/divider';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -10,7 +11,7 @@ import {MatDividerModule} from '@angular/material/divider';
     LayoutComponent
   ],
   imports: [
-    CommonModule,ComponentsModule,MatDividerModule
+    CommonModule,ComponentsModule,MatDividerModule,RouterModule
   ],
   exports:[
     LayoutComponent

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
 import { PostModule } from '../post/post.module';
+import { UikitModule } from "../uikit/uikit.module";
 
 
 
@@ -13,7 +14,7 @@ import { PostModule } from '../post/post.module';
         MainComponent
     ],
     imports: [
-        CommonModule,PostModule
+        CommonModule, PostModule,
     ]
 })
 export class MainModule { }

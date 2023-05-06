@@ -9,20 +9,25 @@
 
           <div class="flex flex-col mt-2">
             <label for="text" class="text-gray-400 pl-0.5">Email</label>
-            <input type="text" id="text" placeholder="Email or username.."
-            class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300" autocomplete="off">
+            <input type="text" id="text" placeholder="Username or email.."
+            class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white" autocomplete="off">
           </div>
 
           <div class="flex flex-col mt-2">
             <label for="password" class="text-gray-400 pl-0.5">Password</label>
             <input type="password" id="password" placeholder="Password.."
-            class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300" autocomplete="off">
+            class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white" autocomplete="off">
           </div>
           <br>
 
+          <div class="flex gap-x-24 justify-between text-sm pl-1 pb-1">
+            <a href="#" class="text-gray-600">Forgot password ?</a>
+            <a routerLink="/register" class="text-gray-600">Don't have an account ?</a>
+          </div>
+
           <div class="flex flex-col justify-center items-baseline gap-y-1 text-con-white w-full">
             <button type="button" class="bg-con-darker-purple text-white rounded-xl w-full
-                                         py-2 px-6 hover:bg-con-bright-purple ml-auto duration-300">
+                                         py-2 px-6 hover:bg-purple-800 ml-auto duration-300">
               Sign in <i class="fas fa-circle-right ml-2"></i>
             </button>
 
