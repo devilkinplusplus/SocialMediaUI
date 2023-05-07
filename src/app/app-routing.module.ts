@@ -6,13 +6,15 @@ import { RegisterComponent } from './home/components/register/register.component
 import { LayoutComponent } from './home/layout/layout.component';
 import { ExploreComponent } from './home/components/uikit/explore/explore.component';
 import { ProfileComponent } from './home/components/profile/profile.component';
+import { ProfileSettingsComponent } from './home/components/profile/profile-settings/profile-settings.component';
 
 const routes: Routes = [
   { path: '' , component: LayoutComponent,
     children:[
       { path: '', component : MainComponent, pathMatch:'full'},
       { path: "explore" , component : ExploreComponent },
-      { path: 'profile' , component:ProfileComponent }
+      { path: 'profile' , component:ProfileComponent },
+      { path: 'settings', component:ProfileSettingsComponent }
     ]
   },
   { path: 'login', component: LoginComponent },
