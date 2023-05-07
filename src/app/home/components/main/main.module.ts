@@ -14,7 +14,7 @@ import { UikitModule } from "../uikit/uikit.module";
         MainComponent
     ],
     imports: [
-        CommonModule, PostModule,
+        CommonModule, PostModule, UikitModule
     ]
 })
 export class MainModule { }
