@@ -1,7 +1,7 @@
 <div class="bg-con-white h-20 py-5 text-con-darker-purple">
   <div class="container flex items-center justify-around space-x-6">
       <!-- Logo -->
-      <a class="text-4xl pl-0 font-bold text-transparent bg-gradient-to-tr bg-clip-text from-con-light-purple to-con-bright-purple">
+      <a routerLink="/" class="text-4xl pl-0 font-bold text-transparent bg-gradient-to-tr bg-clip-text from-con-light-purple to-con-bright-purple">
         Connectfy
       </a>
 
@@ -22,9 +22,10 @@
       <div class="flex gap-6 justify-center text-con-light-purple">
         <p></p>
         <p></p>
-        <a class="text-con-darker-purple"><i class="fa fa-house fa-2xl"></i></a>
-        <a><i class="fa fa-bolt fa-2xl"></i></a>
-        <a><i class="fa fa-user fa-2xl"></i></a>
+        <a routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="text-con-darker-purple">
+          <i class="fa fa-house fa-2xl"></i></a>
+        <a routerLink="/explore" routerLinkActive="text-con-darker-purple"><i class="fa fa-bolt fa-2xl"></i></a>
+        <a routerLink="/profile" routerLinkActive="text-con-darker-purple"><i class="fa fa-user fa-2xl"></i></a>
       </div>
 
        <!-- Notification Icons -->

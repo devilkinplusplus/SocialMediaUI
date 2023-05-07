@@ -1,6 +1,6 @@
 <div class="bg-con-white h-16 py-4 px-6 mb-2">
-  <div class="flex space-x-6 justify-between items-stretch">
-    <p class="text-con-darker-purple text-3xl font-semibold">Explore</p>
+  <div class="flex space-x-6 justify-between px-10 items-stretch">
+    <p class="text-con-darker-purple text-3xl font-semibold">Explore People</p>
     <!--? Search bar -->
     <div class="relative text-gray-600">
       <input type="search" name="search" placeholder="Search here.."
@@ -16,320 +16,245 @@
 <mat-divider></mat-divider>
 
 <!--? Explore people  -->
-<div class="flex flex-wrap justify-between items-center  mx-4">
+<div class="flex flex-wrap justify-evenly items-center mx-4">
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
+  <!--? Item  -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-72 my-2">
+    <div class="relative">
+      <!--! Background Image  -->
+      <img class="h-40 w-full object-cover" src="../../../../../assets/examplebg.jpg" alt="Background Picture">
+      <!--! Profile Image  -->
+      <div class="absolute bottom-0 left-0 m-4">
+        <img class="h-24 w-24 object-cover rounded-full border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg"
+             alt="Profile Picture">
       </div>
     </div>
-  </div>
+    <div class="px-8 py-4">
+      <!--? Username  -->
+      <div class="flex justify-between items-stretch font-medium text-gray-800">
+        <p class="text-2xl">John Doe</p>
+        <button class="bg-indigo-600 px-4 text-base rounded-lg text-white hover:bg-indigo-500 duration-300"
+                type="button">Follow</button>
+      </div>
+      <div class="text-sm text-gray-600 mb-2">@username</div>
+      <div class="text-gray-600">Description of the user.</div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
+      <!--? Extras  -->
+      <div class="flex justify-evenly mt-5">
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Followers</div>
+          <div class="font-medium text-gray-800">100</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Following</div>
+          <div class="font-medium text-gray-800">50</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Posts</div>
+          <div class="font-medium text-gray-800">20</div>
+        </div>
       </div>
 
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
     </div>
   </div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
+  <!--? Item  -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-72 my-2">
+    <div class="relative">
+      <!--! Background Image  -->
+      <img class="h-40 w-full object-cover" src="../../../../../assets/examplebg.jpg" alt="Background Picture">
+      <!--! Profile Image  -->
+      <div class="absolute bottom-0 left-0 m-4">
+        <img class="h-24 w-24 object-cover rounded-full border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg"
+             alt="Profile Picture">
       </div>
     </div>
-  </div>
+    <div class="px-8 py-4">
+      <!--? Username  -->
+      <div class="flex justify-between items-stretch font-medium text-gray-800">
+        <p class="text-2xl">John Doe</p>
+        <button class="bg-indigo-600 px-4 text-base rounded-lg text-white hover:bg-indigo-500 duration-300"
+                type="button">Follow</button>
+      </div>
+      <div class="text-sm text-gray-600 mb-2">@username</div>
+      <div class="text-gray-600">Description of the user.</div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
+      <!--? Extras  -->
+      <div class="flex justify-evenly mt-5">
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Followers</div>
+          <div class="font-medium text-gray-800">100</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Following</div>
+          <div class="font-medium text-gray-800">50</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Posts</div>
+          <div class="font-medium text-gray-800">20</div>
+        </div>
       </div>
 
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
     </div>
   </div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
+   <!--? Item  -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-72 my-2">
+    <div class="relative">
+      <!--! Background Image  -->
+      <img class="h-40 w-full object-cover" src="../../../../../assets/examplebg.jpg" alt="Background Picture">
+      <!--! Profile Image  -->
+      <div class="absolute bottom-0 left-0 m-4">
+        <img class="h-24 w-24 object-cover rounded-full border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg"
+             alt="Profile Picture">
       </div>
     </div>
-  </div>
+    <div class="px-8 py-4">
+      <!--? Username  -->
+      <div class="flex justify-between items-stretch font-medium text-gray-800">
+        <p class="text-2xl">John Doe</p>
+        <button class="bg-indigo-600 px-4 text-base rounded-lg text-white hover:bg-indigo-500 duration-300"
+                type="button">Follow</button>
+      </div>
+      <div class="text-sm text-gray-600 mb-2">@username</div>
+      <div class="text-gray-600">Description of the user.</div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
+      <!--? Extras  -->
+      <div class="flex justify-evenly mt-5">
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Followers</div>
+          <div class="font-medium text-gray-800">100</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Following</div>
+          <div class="font-medium text-gray-800">50</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Posts</div>
+          <div class="font-medium text-gray-800">20</div>
+        </div>
       </div>
 
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
     </div>
   </div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
+  <!--? Item  -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-72 my-2">
+    <div class="relative">
+      <!--! Background Image  -->
+      <img class="h-40 w-full object-cover" src="../../../../../assets/examplebg.jpg" alt="Background Picture">
+      <!--! Profile Image  -->
+      <div class="absolute bottom-0 left-0 m-4">
+        <img class="h-24 w-24 object-cover rounded-full border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg"
+             alt="Profile Picture">
       </div>
     </div>
-  </div>
+    <div class="px-8 py-4">
+      <!--? Username  -->
+      <div class="flex justify-between items-stretch font-medium text-gray-800">
+        <p class="text-2xl">John Doe</p>
+        <button class="bg-indigo-600 px-4 text-base rounded-lg text-white hover:bg-indigo-500 duration-300"
+                type="button">Follow</button>
+      </div>
+      <div class="text-sm text-gray-600 mb-2">@username</div>
+      <div class="text-gray-600">Description of the user.</div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
+      <!--? Extras  -->
+      <div class="flex justify-evenly mt-5">
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Followers</div>
+          <div class="font-medium text-gray-800">100</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Following</div>
+          <div class="font-medium text-gray-800">50</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Posts</div>
+          <div class="font-medium text-gray-800">20</div>
+        </div>
       </div>
 
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
     </div>
   </div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
+  <!--? Item  -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-72 my-2">
+    <div class="relative">
+      <!--! Background Image  -->
+      <img class="h-40 w-full object-cover" src="../../../../../assets/examplebg.jpg" alt="Background Picture">
+      <!--! Profile Image  -->
+      <div class="absolute bottom-0 left-0 m-4">
+        <img class="h-24 w-24 object-cover rounded-full border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg"
+              alt="Profile Picture">
       </div>
     </div>
-  </div>
+    <div class="px-8 py-4">
+      <!--? Username  -->
+      <div class="flex justify-between items-stretch font-medium text-gray-800">
+        <p class="text-2xl">John Doe</p>
+        <button class="bg-indigo-600 px-4 text-base rounded-lg text-white hover:bg-indigo-500 duration-300"
+                type="button">Follow</button>
+      </div>
+      <div class="text-sm text-gray-600 mb-2">@username</div>
+      <div class="text-gray-600">Description of the user.</div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
+      <!--? Extras  -->
+      <div class="flex justify-evenly mt-5">
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Followers</div>
+          <div class="font-medium text-gray-800">100</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Following</div>
+          <div class="font-medium text-gray-800">50</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Posts</div>
+          <div class="font-medium text-gray-800">20</div>
+        </div>
       </div>
 
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
     </div>
   </div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
+  <!--? Item  -->
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-72 my-2">
+    <div class="relative">
+      <!--! Background Image  -->
+      <img class="h-40 w-full object-cover" src="../../../../../assets/examplebg.jpg" alt="Background Picture">
+      <!--! Profile Image  -->
+      <div class="absolute bottom-0 left-0 m-4">
+        <img class="h-24 w-24 object-cover rounded-full border-4 border-white" src="https://randomuser.me/api/portraits/men/1.jpg"
+              alt="Profile Picture">
       </div>
     </div>
-  </div>
+    <div class="px-8 py-4">
+      <!--? Username  -->
+      <div class="flex justify-between items-stretch font-medium text-gray-800">
+        <p class="text-2xl">John Doe</p>
+        <button class="bg-indigo-600 px-4 text-base rounded-lg text-white hover:bg-indigo-500 duration-300"
+                type="button">Follow</button>
+      </div>
+      <div class="text-sm text-gray-600 mb-2">@username</div>
+      <div class="text-gray-600">Description of the user.</div>
 
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
+      <!--? Extras  -->
+      <div class="flex justify-evenly mt-5">
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Followers</div>
+          <div class="font-medium text-gray-800">100</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Following</div>
+          <div class="font-medium text-gray-800">50</div>
+        </div>
+        <div class="w-1/3 text-center">
+          <div class="text-sm text-gray-600">Posts</div>
+          <div class="font-medium text-gray-800">20</div>
+        </div>
       </div>
 
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex items-center gap-2 text-con-darker-purple text-lg py-4 my-2 px-4 hover:bg-gray-200 rounded-lg duration-300">
-    <div class="bg-con-light-purple rounded-full h-10 w-10 flex items-center justify-center">
-      <i class="fas fa-user text-con-darker-purple"></i>
-    </div>
-    <!-- Content -->
-    <div class="flex gap-x-4 items-center">
-      <div class="flex flex-col space-y-1 items-baseline">
-        <a>
-          John Doe
-        </a>
-        <p class="text-xs">1.2k followers</p>
-      </div>
-
-      <div class="text-md flex gap-x-1 items-baseline">
-        <button type="button" class="py-1.5 px-3 rounded-md bg-con-darker-purple text-con-white hover:bg-purple-800 duration-300">
-          Follow
-        </button>
-      </div>
     </div>
   </div>
 

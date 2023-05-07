@@ -5,6 +5,8 @@ import { LoginModule } from './login/login.module';
 import { RegisterModule } from './register/register.module';
 import { UikitModule } from './uikit/uikit.module';
 import { PostModule } from './post/post.module';
+import { ProfileModule } from './profile/profile.module';
+import { CommentModule } from './comment/comment.module';
 
 
 
@@ -12,7 +14,7 @@ import { PostModule } from './post/post.module';
   declarations: [
   ],
   imports: [
-    CommonModule,MainModule,LoginModule,RegisterModule,UikitModule,PostModule,
+    CommonModule,MainModule,LoginModule,RegisterModule,UikitModule,PostModule,ProfileModule,CommentModule
   ]
 })
 export class ComponentsModule { }
