@@ -7,6 +7,7 @@ import { UikitModule } from './uikit/uikit.module';
 import { PostModule } from './post/post.module';
 import { ProfileModule } from './profile/profile.module';
 import { CommentModule } from './comment/comment.module';
+import { ChatModule } from './chat/chat.module';
 
 
 
@@ -14,7 +15,7 @@ import { CommentModule } from './comment/comment.module';
   declarations: [
   ],
   imports: [
-    CommonModule,MainModule,LoginModule,RegisterModule,UikitModule,PostModule,ProfileModule,CommentModule
+    CommonModule,MainModule,LoginModule,RegisterModule,UikitModule,PostModule,ProfileModule,CommentModule,ChatModule
   ]
 })
 export class ComponentsModule { }

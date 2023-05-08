@@ -6,30 +6,33 @@
         alt="Profile Picture">
   </div>
   <!-- User informations -->
-  <div class="flex justify-evenly items-end text-con-black font-medium">
+  <div class="flex justify-between items-end text-con-black font-medium">
     <!-- Name -->
-    <div class="flex flex-col px-3 pt-4">
-      <span class="text-2xl">John Doe
-        <a routerLink="/me" class="pl-1.5"><i class="fas fa-pen text-lg"></i></a>
+    <div class="flex flex-col justify-center items-center px-3 pt-4 mr-40">
+      <span class="text-2xl">Pedro Rodri</span>
+      <span class="text-base text-gray-400">pedrorodri
+        <a routerLink="/chat" class="py-2 px-3"><i class="fas fa-comment-dots"></i></a>
       </span>
     </div>
 
-    <!-- Followers -->
-    <div class="flex justify-start items-baseline space-x-1 mx-2 mr-28">
-      <button class="py-2 px-3 hover:bg-gray-300 rounded-lg duration-300"><i class="fas fa-lock mr-0.5"></i> Change Visibility</button>
-      <a class="py-2 px-3 hover:bg-gray-300 rounded-lg duration-300">1.2k followers</a>
-      <a class="py-2 px-3 hover:bg-gray-300 rounded-lg duration-300">150 followings</a>
-    </div>
+    <div class="flex justify-between items-center">
+      <!-- Followers -->
+      <div class="flex justify-start items-baseline space-x-1 mx-2 mr-28">
+        <a class="py-2 px-3 hover:bg-gray-300 rounded-lg duration-300">1k followers</a>
+        <a class="py-2 px-3 hover:bg-gray-300 rounded-lg duration-300">120 followings</a>
+      </div>
 
-    <!-- Ranks -->
-    <div class="flex flex-wrap justify-center items-center text-2xl">
-      <a class="basis-1/4" matTooltip="Rocket rank" ><i class="fas fa-rocket text-red-700"></i></a>
-      <a class="basis-1/4" matTooltip="Globe rank"><i class="fas fa-globe text-blue-700"></i></a>
-      <a class="basis-1/4" matTooltip="Star rank"><i class="fas fa-star text-yellow-400"></i></a>
-      <a class="basis-1/4" matTooltip="Robotto rank"><i class="fas fa-robot text-gray-700"></i></a>
-      <a class="basis-1/4" matTooltip="Ghost rank"><i class="fas fa-ghost text-gray-400"></i></a>
-      <a class="basis-1/4" matTooltip="Skull rank"><i class="fas fa-skull text-slate-800"></i></a>
-    </div>
+      <!-- Ranks -->
+      <div class="flex flex-wrap justify-center items-center text-2xl">
+        <a class="basis-1/4" matTooltip="Rocket rank" ><i class="fas fa-rocket text-red-700"></i></a>
+        <a class="basis-1/4" matTooltip="Globe rank"><i class="fas fa-globe text-blue-700"></i></a>
+        <a class="basis-1/4" matTooltip="Star rank"><i class="fas fa-star text-yellow-400"></i></a>
+        <a class="basis-1/4" matTooltip="Robotto rank"><i class="fas fa-robot text-gray-700"></i></a>
+        <a class="basis-1/4" matTooltip="Ghost rank"><i class="fas fa-ghost text-gray-400"></i></a>
+        <a class="basis-1/4" matTooltip="Skull rank"><i class="fas fa-skull text-slate-800"></i></a>
+      </div>
+  </div>
+
   </div>
 </div>
 

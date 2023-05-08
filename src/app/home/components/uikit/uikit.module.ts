@@ -7,7 +7,13 @@ import { SuggestedsComponent } from './suggesteds/suggesteds.component';
 import { ExploreComponent } from './explore/explore.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
-
+import { NewsComponent } from './news/news.component';
+import { RanksComponent } from './ranks/ranks.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { PostModule } from '../post/post.module';
+import { CommentModule } from '../comment/comment.module';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -16,17 +22,23 @@ import { RouterModule } from '@angular/router';
     BadgesComponent,
     RequestsComponent,
     SuggestedsComponent,
-    ExploreComponent
+    ExploreComponent,
+    NewsComponent,
+    RanksComponent,
+    UserDetailComponent
   ],
   imports: [
-    CommonModule,MatDividerModule,RouterModule
+    CommonModule,MatDividerModule,RouterModule,MatTabsModule,PostModule,CommentModule,MatTooltipModule
   ],
   exports:[
     SettingsComponent,
     BadgesComponent,
     RequestsComponent,
     SuggestedsComponent,
-    ExploreComponent
+    ExploreComponent,
+    NewsComponent,
+    RanksComponent,
+    UserDetailComponent
   ]
 })
 export class UikitModule { }
