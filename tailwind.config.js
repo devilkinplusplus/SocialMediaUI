@@ -24,7 +24,8 @@ module.exports = {
       },
       fontFamily:{
         opensans: ["Open Sans", "sans-serif"],
-        natosans:['Noto Sans', 'sans-serif']
+        natosans:['Noto Sans', 'sans-serif'],
+        nunitosans:['Nunito Sans', 'sans-serif']
       }
     },
   },

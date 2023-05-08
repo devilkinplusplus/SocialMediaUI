@@ -5,14 +5,18 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { PostModule } from '../post/post.module';
 import { CommentModule } from '../comment/comment.module';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
+import { RouterModule } from '@angular/router';
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
     ProfileComponent,
-    ProfileSettingsComponent
+    ProfileSettingsComponent,
+    UserEditComponent
   ],
   imports: [
-    CommonModule,MatTabsModule,PostModule,CommentModule
+    CommonModule,MatTabsModule,PostModule,CommentModule,RouterModule,MatTooltipModule
   ]
 })
 export class ProfileModule { }

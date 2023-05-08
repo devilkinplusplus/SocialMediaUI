@@ -6,7 +6,8 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { MainModule } from "../../components/main/main.module";
 import { UikitModule } from "../../components/uikit/uikit.module";
-
+import { MatMenuModule } from '@angular/material/menu'
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { UikitModule } from "../../components/uikit/uikit.module";
         FooterComponent,
     ],
     imports: [
-        CommonModule, RouterModule,
+        CommonModule, RouterModule,MatMenuModule,MatDividerModule,
         MainModule,
         UikitModule
     ]
