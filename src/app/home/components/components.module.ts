@@ -8,6 +8,7 @@ import { PostModule } from './post/post.module';
 import { ProfileModule } from './profile/profile.module';
 import { CommentModule } from './comment/comment.module';
 import { ChatModule } from './chat/chat.module';
+import { PasswordModule } from './password/password.module';
 
 
 
@@ -15,7 +16,7 @@ import { ChatModule } from './chat/chat.module';
   declarations: [
   ],
   imports: [
-    CommonModule,MainModule,LoginModule,RegisterModule,UikitModule,PostModule,ProfileModule,CommentModule,ChatModule
+    CommonModule,MainModule,LoginModule,RegisterModule,UikitModule,PostModule,ProfileModule,CommentModule,ChatModule,PasswordModule
   ]
 })
 export class ComponentsModule { }

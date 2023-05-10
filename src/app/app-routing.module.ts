@@ -12,6 +12,9 @@ import { RanksComponent } from './home/components/uikit/ranks/ranks.component';
 import { UserEditComponent } from './home/components/profile/user-edit/user-edit.component';
 import { ChatComponent } from './home/components/chat/chat.component';
 import { UserDetailComponent } from './home/components/uikit/user-detail/user-detail.component';
+import { EmailConfirmComponent } from './home/components/password/email-confirm/email-confirm.component';
+import { ChangePasswordComponent } from './home/components/password/change-password/change-password.component';
+import { HelpComponent } from './home/components/uikit/help/help.component';
 
 const routes: Routes = [
   { path: '' , component: LayoutComponent,
@@ -24,11 +27,15 @@ const routes: Routes = [
       { path: 'settings', component:ProfileSettingsComponent },
       { path: 'me', component:UserEditComponent},
       { path: 'chat', component:ChatComponent },
-      { path: 'user', component:UserDetailComponent}
+      { path: 'user', component:UserDetailComponent},
+      { path: 'help', component:HelpComponent}
     ]
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'confirm', component: EmailConfirmComponent},
+  { path: 'changePassword', component: ChangePasswordComponent},
+
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];

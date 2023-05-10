@@ -14,7 +14,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { PostModule } from '../post/post.module';
 import { CommentModule } from '../comment/comment.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { HelpComponent } from './help/help.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -25,10 +26,18 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     ExploreComponent,
     NewsComponent,
     RanksComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    HelpComponent
   ],
   imports: [
-    CommonModule,MatDividerModule,RouterModule,MatTabsModule,PostModule,CommentModule,MatTooltipModule
+    CommonModule,
+    MatDividerModule,
+    RouterModule,
+    MatTabsModule,
+    PostModule,
+    CommentModule,
+    MatTooltipModule,
+    MatExpansionModule
   ],
   exports:[
     SettingsComponent,
@@ -38,7 +47,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     ExploreComponent,
     NewsComponent,
     RanksComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    HelpComponent
   ]
 })
 export class UikitModule { }
