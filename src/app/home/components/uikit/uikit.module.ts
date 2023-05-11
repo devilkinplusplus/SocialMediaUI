@@ -16,6 +16,7 @@ import { CommentModule } from '../comment/comment.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HelpComponent } from './help/help.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { FollowersComponent } from './followers/followers.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NewsComponent,
     RanksComponent,
     UserDetailComponent,
-    HelpComponent
+    HelpComponent,
+    FollowersComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +50,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NewsComponent,
     RanksComponent,
     UserDetailComponent,
-    HelpComponent
+    HelpComponent,
+    FollowersComponent
   ]
 })
 export class UikitModule { }

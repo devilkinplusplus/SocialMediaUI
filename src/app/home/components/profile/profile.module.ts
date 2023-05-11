@@ -8,6 +8,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { RouterModule } from '@angular/router';
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { UikitModule } from '../uikit/uikit.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     UserEditComponent
   ],
   imports: [
-    CommonModule,MatTabsModule,PostModule,CommentModule,RouterModule,MatTooltipModule
+    CommonModule,MatTabsModule,PostModule,CommentModule,RouterModule,MatTooltipModule,
+    UikitModule
   ]
 })
 export class ProfileModule { }
