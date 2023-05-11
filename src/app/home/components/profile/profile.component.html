@@ -28,10 +28,15 @@
 </div>
 
 <!-- Interactions -->
-<div class="flex justify-evenly items-center bg-gray-200 h-auto rounded-lg px-2 py-2 my-2 mx-10 font-medium">
-  <a><span class="pl-2 text-base text-gray-400 hover:bg-gray-300 duration-300 py-2 px-3 rounded-lg">1.2k followers</span></a>
-  <a><span class="pl-2 text-base text-gray-400 hover:bg-gray-300 duration-300 py-2 px-3 rounded-lg">120 followings</span></a>
-  <a><span class="pl-2 text-base text-gray-400 hover:bg-gray-300 duration-300 py-2 px-3 rounded-lg">50 likes</span></a>
+<div class="flex justify-evenly items-center bg-gray-200 h-auto rounded-lg my-2 mx-10 font-medium">
+  <mat-tab-group class="w-full">
+    <mat-tab label="1.2k Followers">
+      <app-followers></app-followers>
+    </mat-tab>
+    <mat-tab label="120 Followings">
+      <app-followers></app-followers>
+    </mat-tab>
+  </mat-tab-group>
 </div>
 
 <!-- About -->
