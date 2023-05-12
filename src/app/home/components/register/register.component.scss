@@ -1,6 +1,6 @@
 .wrapper {
   text-align: center;
-  padding-left: 5;
+
   h1 {
     font-size: 5rem;
     text-transform: uppercase;
@@ -12,11 +12,6 @@
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear forwards;
     padding: 1rem 0;
-  }
-  @media (max-width: 767px) {
-    h1 {
-      font-size: 4rem; /* Adjust the font size to your preference */
-    }
   }
 }
 

@@ -1,22 +1,22 @@
 <!-- Background -->
-<div class="flex bg-gray-200 justify-start py-10 px-5 mx-10 mt-2 gap-x-2 h-28 md:h-40 rounded-lg items-center">
+<div class="flex bg-gray-200 justify-start py-10 px-5 mx-10 mt-2 gap-x-2 h-40 rounded-lg items-center">
   <!-- Profile Image -->
   <div class="relative bottom-0 left-0 my-6">
-    <img class="md:h-24 md:w-24 h-12 w-12 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"
+    <img class="h-24 w-24 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"
         alt="Profile Picture">
   </div>
   <!-- User informations -->
   <div class="flex justify-between items-end text-con-black font-medium">
     <!-- Name -->
-    <div class="flex flex-col justify-center items-start px-3 pt-4 basis-4/5">
-      <span class="md:text-2xl text-lg">John Doe
-        <a routerLink="/me" class="pl-1.5"><i class="fas fa-pen text-xs md:text-lg"></i></a>
+    <div class="flex flex-col justify-center items-start px-3 pt-4 mr-40">
+      <span class="text-2xl">John Doe
+        <a routerLink="/me" class="pl-1.5"><i class="fas fa-pen text-lg"></i></a>
       </span>
-      <button class="md:py-2 md:px-3 py-1 px-1.5 hover:bg-gray-300 rounded-lg duration-300"><i class="fas fa-lock mr-0.5"></i>Visibility</button>
+      <button class="py-2 px-3 hover:bg-gray-300 rounded-lg duration-300"><i class="fas fa-lock mr-0.5"></i> Change Visibility</button>
     </div>
 
     <!-- Ranks -->
-    <div class="flex flex-wrap justify-center items-center text-lg md:text-2xl">
+    <div class="flex flex-wrap justify-center items-center text-2xl">
       <a class="basis-1/4" matTooltip="Rocket rank" ><i class="fas fa-rocket text-red-700"></i></a>
       <a class="basis-1/4" matTooltip="Globe rank"><i class="fas fa-globe text-blue-700"></i></a>
       <a class="basis-1/4" matTooltip="Star rank"><i class="fas fa-star text-yellow-400"></i></a>
@@ -25,7 +25,6 @@
       <a class="basis-1/4" matTooltip="Skull rank"><i class="fas fa-skull text-slate-800"></i></a>
     </div>
   </div>
-  
 </div>
 
 <!-- Interactions -->
