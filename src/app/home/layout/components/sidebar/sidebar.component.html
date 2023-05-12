@@ -1,9 +1,10 @@
 <div class="flex">
-  <div class="w-1/5 h-screen bg-white text-con-darker-purple">
+  <div class="w-1/5 h-screen bg-white text-con-darker-purple hidden sm:block">
     <app-badges></app-badges>
     <app-settings></app-settings>
   </div>
-  <div class="w-4/5 h-screen bg-gray-100 overflow-auto">
+  <div class="w-full sm:w-4/5 h-screen bg-gray-100 overflow-auto">
     <router-outlet></router-outlet>
   </div>
 </div>
+

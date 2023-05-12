@@ -1,16 +1,13 @@
-<div class="bg-con-white h-20 py-5 text-con-darker-purple">
-  <div class="container flex items-center justify-around space-x-6">
+<div class="bg-con-white py-5 text-con-darker-purple">
+  <div class="container mx-auto flex items-center justify-between px-4 md:space-x-3 lg:space-x-6">
       <!-- Logo -->
-      <a routerLink="/" class="text-4xl pl-0 font-bold text-transparent bg-gradient-to-tr bg-clip-text from-con-light-purple to-con-bright-purple">
+      <a routerLink="/" class="basis-1/4 text-4xl pl-0 font-bold text-transparent bg-gradient-to-tr bg-clip-text from-con-light-purple to-con-bright-purple">
         Connectfy
       </a>
 
-      <p></p>
-      <p></p>
       <!-- Search bar -->
-      <div class="relative text-gray-600">
-        <input type="search" name="search" placeholder="Search"
-               class="bg-white h-10 px-5 pr-10 rounded-full border border-gray-300 text-sm focus:outline-none w-96">
+      <div class="hidden md:block relative text-gray-600">
+        <input type="search" name="search" placeholder="Search" class="bg-white h-10 px-5 pr-10 rounded-full border border-gray-300 text-sm focus:outline-none md:w-72 lg:w-96">
         <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
           <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M23.707,22.293l-5.323-5.323C19.396,15.665,20,13.902,20,12c0-4.411-3.589-8-8-8S4,7.589,4,12s3.589,8,8,8 c1.902,0,3.665-0.604,5.07-1.616l5.323,5.323c0.391,0.391,1.023,0.391,1.414,0l0,0C24.098,23.316,24.098,22.684,23.707,22.293z M12,18 c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S15.309,18,12,18z"/>
@@ -19,51 +16,60 @@
       </div>
 
       <!-- Menu Icons -->
-      <div class="flex gap-6 justify-center text-con-light-purple">
-        <p></p>
+      <div class="flex gap-4 justify-center text-con-light-purple">
         <a routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="text-con-darker-purple">
-          <i class="fa fa-house fa-2xl"></i></a>
-        <a routerLink="/explore" routerLinkActive="text-con-darker-purple"><i class="fa fa-bolt fa-2xl"></i></a>
-        <a routerLink="profile" routerLinkActive="text-con-darker-purple"><i class="fa fa-user-secret fa-2xl"></i></a>
+          <i class="fa fa-house fa-2xl"></i>
+        </a>
+        <a routerLink="/explore" routerLinkActive="text-con-darker-purple">
+          <i class="fa fa-bolt fa-2xl"></i>
+        </a>
+        <a routerLink="profile" routerLinkActive="text-con-darker-purple">
+          <i class="fa fa-user-secret fa-2xl"></i>
+        </a>
       </div>
 
       <!-- Secondary Icons -->
-      <div class="flex gap-6 justify-center text-purple-800">
-        <a routerLink="login" routerLinkActive="text-con-darker-purple"><i class="fa fa-user fa-2xl"></i></a>
-        <a [mat-menu-trigger-for]="notification"><i class="fa fa-bell fa-2xl"></i></a>
+      <div class="hidden md:flex gap-4 justify-center text-purple-800">
+        <a routerLink="login" routerLinkActive="text-con-darker-purple">
+          <i class="fa fa-user fa-2xl"></i>
+        </a>
+        <a [mat-menu-trigger-for]="notification">
+          <i class="fa fa-bell fa-2xl"></i>
+        </a>
         <mat-menu #notification="matMenu">
           <div class="flex flex-col justify-start items-start gap-y-1 py-2 px-2 w-64">
-            <p class="text-base text-gray-500 pl-3">Notifications</p>
-            <!--? Item -->
-            <div class="flex justify-start items-center gap-x-2 pl-3 py-2 px-4">
-              <img class="h-10 w-10 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="Profile Picture">
-              <div class="flex flex-col gap-y-0 justify-center items-baseline">
-                <span class="text-sm text-gray-400">John liked your post</span>
-                <span class="text-xs text-gray-200">1 minute ago</span>
+            <p class="text-base text-gray-500 pl-3">
+              <p class="text-base text-gray-500 pl-3">Notifications</p>
+              <!-- Notification Items -->
+              <div class="flex flex-col gap-y-2 pl-3">
+                <!-- Item 1 -->
+                <div class="flex items-center gap-x-2">
+                  <img class="h-10 w-10 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile Picture">
+                  <div class="flex flex-col">
+                    <span class="text-sm text-gray-400">John liked your post</span>
+                    <span class="text-xs text-gray-200">1 minute ago</span>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex items-center gap-x-2">
+                  <img class="h-10 w-10 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile Picture">
+                  <div class="flex flex-col">
+                    <span class="text-sm text-gray-400">John liked your post</span>
+                    <span class="text-xs text-gray-200">1 minute ago</span>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex items-center gap-x-2">
+                  <img class="h-10 w-10 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile Picture">
+                  <div class="flex flex-col">
+                    <span class="text-sm text-gray-400">John liked your post</span>
+                    <span class="text-xs text-gray-200">1 minute ago</span>
+                  </div>
+                </div>
+                <div class="flex justify-center items-center pb-1 text-gray-300 text-sm">
+                  <a routerLink="/news">See more</a>
+                </div>
               </div>
-            </div>
-            <!--? Item -->
-            <div class="flex justify-start items-center gap-x-2 pl-3 py-2 px-4">
-              <img class="h-10 w-10 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="Profile Picture">
-              <div class="flex flex-col gap-y-0 justify-center items-baseline">
-                <span class="text-sm text-gray-400">John liked your post</span>
-                <span class="text-xs text-gray-200">1 minute ago</span>
-              </div>
-            </div>
-            <!--? Item -->
-            <div class="flex justify-start items-center gap-x-2 pl-3 py-2 px-4">
-            <img class="h-10 w-10 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"
-                alt="Profile Picture">
-            <div class="flex flex-col gap-y-0 justify-center items-baseline">
-              <span class="text-sm text-gray-400">John liked your post</span>
-              <span class="text-xs text-gray-200">1 minute ago</span>
-            </div>
-            </div>
-          </div>
-          <div class="flex justify-center items-center pb-1 text-gray-300 text-sm">
-            <a routerLink="/news">See more</a>
           </div>
         </mat-menu>
         <a routerLink="/chat"><i class="fa fa-comment-dots fa-2xl"></i></a>

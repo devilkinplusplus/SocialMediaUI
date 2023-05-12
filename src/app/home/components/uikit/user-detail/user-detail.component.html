@@ -2,22 +2,21 @@
 <div class="flex bg-gray-200 justify-start py-10 px-5 mx-10 mt-2 gap-x-2 h-40 rounded-lg items-center">
   <!-- Profile Image -->
   <div class="relative bottom-0 left-0 my-6">
-    <img class="h-24 w-24 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"
+    <img class="md:h-24 md:w-24 h-12 w-12 object-cover rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"
         alt="Profile Picture">
   </div>
   <!-- User informations -->
   <div class="flex justify-between items-end text-con-black font-medium">
     <!-- Name -->
-    <div class="flex flex-col justify-center items-start px-3 pt-4 mr-40">
-      <span class="text-2xl">Pedro Rodrigez</span>
-      <span class="text-base text-gray-400">pedrorodri
+    <div class="flex flex-col justify-center items-start px-3 pt-4 basis-4/5">
+      <span class="md:text-2xl text-lg">Pedro Rodrigez</span>
+      <span class="md:text-base text-sm text-gray-400">pedrorodri
         <a routerLink="/chat" class="py-2 px-3"><i class="fas fa-comment-dots"></i></a>
       </span>
       <button type="button" class="py-1 px-4 my-1 w-full rounded-lg bg-con-darker-purple text-con-white font-medium hover:bg-purple-700 duration-300">
         Follow
       </button>
     </div>
-
     <!-- Ranks -->
     <div class="flex flex-wrap justify-center items-center text-2xl">
       <a class="basis-1/4" matTooltip="Rocket rank" ><i class="fas fa-rocket text-red-700"></i></a>
@@ -27,15 +26,19 @@
       <a class="basis-1/4" matTooltip="Ghost rank"><i class="fas fa-ghost text-gray-400"></i></a>
       <a class="basis-1/4" matTooltip="Skull rank"><i class="fas fa-skull text-slate-800"></i></a>
     </div>
-
   </div>
 </div>
 
 <!-- Interactions -->
-<div class="flex justify-evenly items-center bg-gray-200 h-auto rounded-lg px-2 py-2 my-2 mx-10 font-medium">
-  <a><span class="pl-2 text-base text-gray-400 hover:bg-gray-300 duration-300 py-2 px-3 rounded-lg">1k followers</span></a>
-  <a><span class="pl-2 text-base text-gray-400 hover:bg-gray-300 duration-300 py-2 px-3 rounded-lg">120 followings</span></a>
-  <a><span class="pl-2 text-base text-gray-400 hover:bg-gray-300 duration-300 py-2 px-3 rounded-lg">70 likes</span></a>
+<div class="flex justify-evenly items-center bg-gray-200 h-auto rounded-lg my-2 mx-10 font-medium">
+  <mat-tab-group class="w-full">
+    <mat-tab label="1.2k Followers">
+      <app-followers></app-followers>
+    </mat-tab>
+    <mat-tab label="120 Followings">
+      <app-followers></app-followers>
+    </mat-tab>
+  </mat-tab-group>
 </div>
 
 <!-- About -->
