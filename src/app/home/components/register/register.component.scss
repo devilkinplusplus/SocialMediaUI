@@ -13,7 +13,13 @@
     animation: textclip 2s linear forwards;
     padding: 1rem 0;
   }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 3rem; /* Adjust the font size to your preference */
+    }
+  }
 }
+
 
 @keyframes textclip {
   to {

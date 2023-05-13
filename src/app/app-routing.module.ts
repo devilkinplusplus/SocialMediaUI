@@ -15,6 +15,7 @@ import { UserDetailComponent } from './home/components/uikit/user-detail/user-de
 import { EmailConfirmComponent } from './home/components/password/email-confirm/email-confirm.component';
 import { ChangePasswordComponent } from './home/components/password/change-password/change-password.component';
 import { HelpComponent } from './home/components/uikit/help/help.component';
+import { LayoutComponent as LayoutAdmin } from './admin/layout/layout.component';
 
 const routes: Routes = [
   { path: '' , component: LayoutComponent,
@@ -35,6 +36,12 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'confirm', component: EmailConfirmComponent},
   { path: 'changePassword', component: ChangePasswordComponent},
+
+  //! Admin
+  {
+    path: 'admin' ,component:LayoutAdmin,
+  },
+
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

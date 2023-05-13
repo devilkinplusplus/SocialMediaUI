@@ -17,7 +17,11 @@ module.exports = {
         "con-black":"#2E3033",
         "con-orange":"#F0943F",
         "con-red":"#F04F3F",
-        "con-green":"#1EBE00"
+        "con-green":"#1EBE00",
+        "admin-darkblue":"#03045E",
+        "admin-cyan":"#00B4D8",
+        "admin-lightblue":"#00B4D8",
+        "admin-faceblue":"#CAF0F8"
       },
       width:{
         "128":"736px"
