@@ -53,7 +53,6 @@ export class LoginComponent {
     this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
-
   async login(usernameOrEmail:string,password:string){
     this.spinner.show(SpinnerType.LineSpinClokwise);
     await this.authService.login(usernameOrEmail,password,()=>{
@@ -71,4 +70,5 @@ export class LoginComponent {
 
   }
 
+  
 }
