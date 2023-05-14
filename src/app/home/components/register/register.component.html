@@ -8,54 +8,53 @@
     <!-- Form  -->
     <div class="bg-white h-auto text-base py-8 px-10 rounded-xl">
       <p class="text-2xl text-con-darker-purple">Your next adventure starts here</p>
-      <form class="flex flex-col space-y-1 items-start justify-start text-gray-500">
+      <form class="flex flex-col space-y-1 items-start justify-start text-gray-500"
+            [formGroup]="form" (ngSubmit)="create(form.value)">
         <div class="flex flex-col mt-2">
           <label for="firstName" class="text-gray-400 pl-0.5">First name</label>
-          <input type="text" id="firstName" placeholder="Your name.." autocomplete="off"
+          <input type="text" id="firstName" placeholder="Your name.." autocomplete="off" formControlName="firstName"
           class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white">
         </div>
 
         <div class="flex flex-col mt-2">
           <label for="lastName" class="text-gray-400 pl-0.5">Last name</label>
-          <input type="text" id="lastName" placeholder="Your last name.."
+          <input type="text" id="lastName" placeholder="Your last name.." formControlName="lastName"
             class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white" autocomplete="off">
         </div>
 
         <div class="flex flex-col mt-2">
           <label for="email" class="text-gray-400 pl-0.5">Email</label>
-          <input type="email" id="email" placeholder="example@gmail.com"
+          <input type="email" id="email" placeholder="example@gmail.com" formControlName="email"
           class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white" autocomplete="off">
         </div>
 
         <div class="flex flex-col mt-2">
           <label label for="userName" class="text-gray-400 pl-0.5">Pick a username</label>
-          <input type="text" id="userName" placeholder="Set username.."
+          <input type="text" id="userName" placeholder="Set username.." formControlName="userName"
             class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white" autocomplete="off">
         </div>
 
         <div class="flex flex-col mt-2">
           <label label for="date" class="text-gray-400 pl-0.5">Date</label>
-          <input type="date" id="date" placeholder="Birth date.."
+          <input type="date" id="date" placeholder="Birth date.." formControlName="date"
             class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white" autocomplete="off">
         </div>
 
         <div class="flex flex-col mt-2">
           <label for="password" class="text-gray-400 pl-0.5">Password</label>
-          <input type="password" id="password" placeholder="Password.."
+          <input type="password" id="password" placeholder="Password.." formControlName="password"
           class="w-96 py-1.5 px-2.5 bg-gray-100 rounded-lg outline-none placeholder:text-gray-300 focus:bg-white" autocomplete="off">
         </div>
 
         <br>
         <div class="flex flex-grow w-full text-con-white items-center gap-x-5">
           <a routerLink="/login" class="text-gray-600 pl-1">Already have an account ?</a>
-          <button type="button" class="bg-con-darker-purple text-white rounded-xl py-2 px-6 hover:bg-purple-800 ml-auto duration-300">
+          <button type="submit" class="bg-con-darker-purple text-white rounded-xl py-2 px-6 hover:bg-purple-800 ml-auto duration-300">
             Let's goo! <i class="fas fa-circle-right ml-2"></i>
           </button>
         </div>
 
-
       </form>
     </div>
-
   </div>
 </div>
