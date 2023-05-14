@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'confirm', component: EmailConfirmComponent},
-  { path: 'changePassword', component: ChangePasswordComponent},
+  { path: 'changePassword/:userId/:resetToken', component: ChangePasswordComponent},
 
   //! Admin
   {

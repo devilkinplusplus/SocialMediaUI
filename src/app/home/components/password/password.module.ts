@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EmailConfirmComponent } from './email-confirm/email-confirm.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,7 +12,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ChangePasswordComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,RouterModule
   ],
   exports:[
     EmailConfirmComponent,ChangePasswordComponent
