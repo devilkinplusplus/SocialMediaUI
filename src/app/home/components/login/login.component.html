@@ -27,19 +27,19 @@
 
           <div class="flex flex-col justify-center items-baseline gap-y-1 text-con-white w-full">
             <button type="button" (click)="login(txtUsernameOrEmail.value,txtPassword.value)"
-                    class="bg-con-darker-purple text-white rounded-xl w-full py-2 px-6 hover:bg-purple-800 ml-auto duration-300">
+                    class="bg-con-darker-purple text-white rounded-2xl w-96 py-2 px-6 hover:bg-purple-800 duration-300">
               Sign in <i class="fas fa-circle-right ml-2"></i>
             </button>
 
-            <button type="button" class="bg-blue-700 text-white rounded-xl w-full
-            py-2 px-6 hover:bg-blue-600 ml-auto duration-300">
+            <button type="button"  (click)="facebookLogin()"
+                    class="bg-blue-700 text-white rounded-2xl w-96 py-2 px-6 hover:bg-blue-600 duration-300">
               Sign in with Facebook <i class="fa-brands fa-facebook ml-2"></i>
             </button>
 
-            <button type="button" class="bg-con-white text-con-black rounded-xl w-full
-            py-2 px-6 hover:bg-gray-100 ml-auto duration-300">
-              Sign in with Google <i class="fa-brands fa-google ml-2"></i>
-            </button>
+            <asl-google-signin-button
+                  shape="circle" width="384" logo_alignment="center"
+                  type="standard" size='large' theme="outline">
+            </asl-google-signin-button>
           </div>
         </form>
     </div>
