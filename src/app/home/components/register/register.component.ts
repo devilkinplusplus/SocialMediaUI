@@ -31,9 +31,9 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-    get component() {
-      return this.form.controls;
-    }
+  get component() {
+    return this.form.controls;
+  }
 
   submitted: boolean = false;
 
@@ -47,7 +47,6 @@ export class RegisterComponent implements OnInit {
     if(result.succeeded){
       this.router.navigate(['/login']);
     }else{
-
       for (const item of result.errors) {
         this.toastr.message(item,"Error",{
           messageType:MessageType.Error,

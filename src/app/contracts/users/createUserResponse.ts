@@ -1,4 +1,4 @@
-export class CreateUserResponse{
-  succeeded:boolean;
-  errors: string[];
+import { BaseResponse } from "../baseResponse";
+
+export class CreateUserResponse extends BaseResponse{
 }

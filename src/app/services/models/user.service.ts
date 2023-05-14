@@ -11,7 +11,7 @@ export class UserService {
   constructor(private httpClient:HttpClientService) { }
 
   async create(createUser:CreateUser) : Promise<CreateUserResponse> {
-    const obs :Observable<CreateUser | CreateUserResponse> = this.httpClient.post<CreateUser | any>({
+    const obs : Observable<CreateUser | CreateUserResponse> = this.httpClient.post<CreateUser | any>({
       controller:"users"
     },{
       createUser
@@ -19,8 +19,6 @@ export class UserService {
 
     return await firstValueFrom(obs) as CreateUserResponse;
   }
-
-
 
 
 }

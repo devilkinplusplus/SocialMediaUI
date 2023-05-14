@@ -8,6 +8,7 @@ import { AdminModule } from './admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,13 @@ import { ToastrModule } from 'ngx-toastr';
         HomeModule,
         AdminModule,
         NgxSpinnerModule,
-        ToastrModule.forRoot()
+        ToastrModule.forRoot(),
+        JwtModule.forRoot({
+          config: {
+            tokenGetter: () => localStorage.getItem('accessToken'),
+            allowedDomains: ['localhost:7134'],
+          },
+        }),
     ]
 })
 export class AppModule { }
