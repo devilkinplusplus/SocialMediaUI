@@ -21,6 +21,19 @@ export class AuthCheckService {
     isAuthenticated = token != null && !isExpired;
   }
 
+  getTokenRoles(): string[] {
+    const token: string | null = localStorage.getItem('accessToken');
+    const tokenPayload: any = this.jwtHelper.decodeToken(token);
+    console.log(tokenPayload);
+    const roles: string[] = tokenPayload?.Roles ?? [];
+    return roles;
+  }
+
+  hasAdminRole(): boolean {
+    const roles: string[] = this.getTokenRoles();
+    return roles.includes('Admin');
+  }
+
   get isUserAuthenticated():boolean{
     return isAuthenticated;
   }
