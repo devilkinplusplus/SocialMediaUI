@@ -24,8 +24,7 @@ export class AuthCheckService {
   getTokenRoles(): string[] {
     const token: string | null = localStorage.getItem('accessToken');
     const tokenPayload: any = this.jwtHelper.decodeToken(token);
-    console.log(tokenPayload);
-    const roles: string[] = tokenPayload?.Roles ?? [];
+    const roles: string[] = tokenPayload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] ?? [];
     return roles;
   }
 

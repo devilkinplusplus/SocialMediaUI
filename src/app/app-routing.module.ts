@@ -18,6 +18,7 @@ import { HelpComponent } from './home/components/uikit/help/help.component';
 import { LayoutComponent as LayoutAdmin } from './admin/layout/layout.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminGuard } from './guards/admin.guard';
+import { UserListComponent } from './admin/components/user/user-list/user-list.component';
 
 const routes: Routes = [
   { path: '' , component: LayoutComponent,
@@ -41,7 +42,9 @@ const routes: Routes = [
 
   //! Admin
   {
-    path: 'admin' ,component:LayoutAdmin,canActivate:[AdminGuard]
+    path: 'admin' ,component:LayoutAdmin, children:[
+      { path: 'users' , component:UserListComponent }
+    ] ,canActivate:[AdminGuard]
   },
 
 

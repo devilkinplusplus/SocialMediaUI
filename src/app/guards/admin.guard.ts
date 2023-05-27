@@ -12,7 +12,7 @@ export class AdminGuard implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot,state: RouterStateSnapshot) {
-
+    this.auth.checkIdentity();
     if (!isAuthenticated) {
       //! state.url getmek istenen componentin urldir
       this.router.navigate(['/login'],{ queryParams: { returnUrl : state.url }});
