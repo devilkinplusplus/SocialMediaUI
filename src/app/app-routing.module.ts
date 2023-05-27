@@ -16,6 +16,9 @@ import { EmailConfirmComponent } from './home/components/password/email-confirm/
 import { ChangePasswordComponent } from './home/components/password/change-password/change-password.component';
 import { HelpComponent } from './home/components/uikit/help/help.component';
 import { LayoutComponent as LayoutAdmin } from './admin/layout/layout.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/admin.guard';
+import { UserListComponent } from './admin/components/user/user-list/user-list.component';
 
 const routes: Routes = [
   { path: '' , component: LayoutComponent,
@@ -30,7 +33,7 @@ const routes: Routes = [
       { path: 'chat', component:ChatComponent },
       { path: 'user', component:UserDetailComponent},
       { path: 'help', component:HelpComponent}
-    ]
+    ],canActivate:[AuthGuard]
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
@@ -39,7 +42,9 @@ const routes: Routes = [
 
   //! Admin
   {
-    path: 'admin' ,component:LayoutAdmin,
+    path: 'admin' ,component:LayoutAdmin, children:[
+      { path: 'users' , component:UserListComponent }
+    ] ,canActivate:[AdminGuard]
   },
 
 

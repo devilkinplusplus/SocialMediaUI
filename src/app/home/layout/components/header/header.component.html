@@ -25,6 +25,7 @@
           <i class="fa fa-house fa-2xl"></i></a>
         <a routerLink="/explore" routerLinkActive="text-con-darker-purple"><i class="fa fa-bolt fa-2xl"></i></a>
         <a routerLink="profile" routerLinkActive="text-con-darker-purple"><i class="fa fa-user-secret fa-2xl"></i></a>
+        <a routerLink="/admin" routerLinkActive="text-con-darker-purple" *ngIf="auth.hasAdminRole()"><i class="fa fa-gauge fa-2xl"></i></a>
       </div>
 
       <!-- Secondary Icons -->

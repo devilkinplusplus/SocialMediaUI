@@ -9,11 +9,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { JwtModule } from '@auth0/angular-jwt';
-import { FacebookLoginProvider, GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { DialogModule } from './dialogs/dialog.module';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -32,7 +33,7 @@ import { FacebookLoginProvider, GoogleLoginProvider, GoogleSigninButtonModule, S
           },
         }),
         SocialLoginModule,
-        GoogleSigninButtonModule
+        DialogModule
     ],
     providers: [
       { provide: 'baseUrl', useValue: 'https://localhost:7134/api', multi: true },

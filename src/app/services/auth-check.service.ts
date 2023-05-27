@@ -21,6 +21,18 @@ export class AuthCheckService {
     isAuthenticated = token != null && !isExpired;
   }
 
+  getTokenRoles(): string[] {
+    const token: string | null = localStorage.getItem('accessToken');
+    const tokenPayload: any = this.jwtHelper.decodeToken(token);
+    const roles: string[] = tokenPayload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] ?? [];
+    return roles;
+  }
+
+  hasAdminRole(): boolean {
+    const roles: string[] = this.getTokenRoles();
+    return roles.includes('Admin');
+  }
+
   get isUserAuthenticated():boolean{
     return isAuthenticated;
   }
