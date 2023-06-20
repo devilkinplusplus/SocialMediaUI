@@ -22,7 +22,6 @@ export class AuthService {
     },{
       usernameOrEmail,password
     })
-
     const response : TokenResponse =  await firstValueFrom(obs) as TokenResponse;
 
     if(response.succeeded){

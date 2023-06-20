@@ -3,7 +3,7 @@ import { HttpClientService } from '../common/http-client.service';
 import { Observable, firstValueFrom } from 'rxjs';
 import { CreateUser } from 'src/app/contracts/users/createUser';
 import { CreateUserResponse } from 'src/app/contracts/users/createUserResponse';
-import { UserResponse } from 'src/app/contracts/users/userResponse';
+import { UserOneResponse, UserResponse } from 'src/app/contracts/users/userResponse';
 import { User } from 'src/app/contracts/users/user';
 import { BaseResponse } from 'src/app/contracts/baseResponse';
 import { UserRolesResponse } from 'src/app/contracts/users/userRoles';
@@ -82,6 +82,16 @@ export class UserService {
     }
 
     return res;
+  }
+
+  async getUserById(userId:string):Promise<UserOneResponse>{
+    const obs = this.httpClient.get({controller:"users",action:"user"},userId);
+    const response : UserOneResponse = await firstValueFrom(obs) as UserOneResponse;
+
+    if(response.succeeded){
+      return response;
+    }
+    return null;
   }
 
 }

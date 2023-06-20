@@ -1,124 +1,50 @@
 <!--? Post with only content  -->
-<div class="flex flex-col space-y-4 bg-gray-50 p-4 rounded-lg shadow-lg px-6 md:mx-10 my-4">
-  <div class="flex items-center space-x-4">
-    <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile picture">
-    <div class="ml-2 space-x-3">
-      <span class="text-con-black text-lg">John Doe</span>
-      <span class="text-gray-400 text-sm">2 hours ago</span>
+<ng-template ngFor let-item [ngForOf]="posts">
+  <div class="flex flex-col flex-wrap space-y-4 bg-gray-50 py-4 rounded-lg shadow-lg px-6 ml-4 mr-64 my-4" >
+    <div class="flex items-center space-x-4">
+      <img class="h-10 w-10 rounded-full" alt="Profile picture"
+                [src]="item.user.profileImage?url+item.user.profileImage:'https://randomuser.me/api/portraits/men/1.jpg'">
+      <div class="ml-2 space-x-3">
+        <span class="text-con-black text-lg">{{item.user.firstName}} {{item.user.lastName}}</span>
+        <span class="text-gray-400 text-sm">2 hours ago</span>
+      </div>
     </div>
-  </div>
-  <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, sint. Repellendus, blanditiis!</p>
-  <div class="flex items-center space-x-4 text-gray-600">
-    <button class="flex items-center space-x-1 focus:outline-none thumbs-up" id="like_1">
-      <i class="fas fa-thumbs-up"></i>
-      <span>42</span>
-    </button>
-    <button class="flex items-center space-x-1 focus:outline-none comment" id="com_1">
-      <i class="fas fa-comment"></i>
-      <span>8</span>
-    </button>
-    <button [matMenuTriggerFor]="menu" class="flex items-center space-x-1 focus:outline-none">
-      <i class="fas fa-share-nodes"></i>
-    </button>
-    <mat-menu #menu="matMenu" class="text-base">
-      <button mat-menu-item>Share with Whatsapp <i class="fa-brands fa-whatsapp pl-1 text-base text-green-500"></i> </button>
-      <button mat-menu-item>Share with Facebook <i class="fa-brands fa-facebook pl-1 text-base text-blue-500"></i> </button>
-      <button mat-menu-item>Share with Telegram <i class="fa-brands fa-telegram pl-1 text-base text-blue-300"></i> </button>
-    </mat-menu>
-  </div>
-  <div class="hidden mt-4" id="comment-section_1">
-    <form>
-      <textarea class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none text-gray-700 py-2 px-4 leading-5 resize-none" rows="4" placeholder="Add a comment"></textarea>
-      <button type="button" class="bg-con-darker-purple hover:bg-con-bright-purple text-white font-medium py-2 px-4 rounded-md mt-2 duration-200">
-        Submit
+    <p class="text-lg text-gray-800">
+      {{item.content}}
+    </p>
+    <img [src]="url+item.files" alt="Post image" class="rounded-lg shadow-lg max-w-lg h-auto" *ngIf="item.files.length > 0">
+    <div class="flex items-center space-x-4 text-gray-600">
+      <button class="flex items-center space-x-1 focus:outline-none thumbs-up" [id]="item.userId" (click)="likePost(item.id,item.userId)">
+        <i class="fas fa-thumbs-up"></i>
+        <span>{{item.likes}}</span>
       </button>
-    </form>
-    <div class="flex flex-col justify-start items-start text-base">
-      <app-comment-list></app-comment-list>
-    </div>
-  </div>
-</div>
-
-
-<!--? Post with only content  -->
-<div class="flex flex-col space-y-4 bg-gray-50 p-4 rounded-lg shadow-lg px-6 md:mx-10 my-4">
-  <div class="flex items-center space-x-4">
-    <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile picture">
-    <div class="ml-2 space-x-3">
-      <span class="text-con-black text-lg">John Doe</span>
-      <span class="text-gray-400 text-sm">2 hours ago</span>
-    </div>
-  </div>
-  <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, sint. Repellendus, blanditiis!</p>
-  <div class="flex items-center space-x-4 text-gray-600">
-    <button class="flex items-center space-x-1 focus:outline-none thumbs-up" id="like_2">
-      <i class="fas fa-thumbs-up"></i>
-      <span>42</span>
-    </button>
-    <button class="flex items-center space-x-1 focus:outline-none comment" id="com_2">
-      <i class="fas fa-comment"></i>
-      <span>8</span>
-    </button>
-    <button [matMenuTriggerFor]="menu" class="flex items-center space-x-1 focus:outline-none">
-      <i class="fas fa-share-nodes"></i>
-    </button>
-    <mat-menu #menu="matMenu" class="text-base">
-      <button mat-menu-item>Share with Whatsapp <i class="fa-brands fa-whatsapp pl-1 text-base text-green-500"></i> </button>
-      <button mat-menu-item>Share with Facebook <i class="fa-brands fa-facebook pl-1 text-base text-blue-500"></i> </button>
-      <button mat-menu-item>Share with Telegram <i class="fa-brands fa-telegram pl-1 text-base text-blue-300"></i> </button>
-    </mat-menu>
-  </div>
-  <div class="hidden mt-4" id="comment-section_2">
-    <form>
-      <textarea class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none text-gray-700 py-2 px-4 leading-5 resize-none" rows="4" placeholder="Add a comment"></textarea>
-      <button type="button" class="bg-con-darker-purple hover:bg-con-bright-purple text-white font-medium py-2 px-4 rounded-md mt-2 duration-200">
-        Submit
+      <button class="flex items-center space-x-1 focus:outline-none comment" id="com_1">
+        <i class="fas fa-comment"></i>
+        <span>8</span>
       </button>
-    </form>
-    <div class="flex flex-col justify-start items-start text-base">
-      <app-comment-list></app-comment-list>
-    </div>
-  </div>
-</div>
-
-<!--? Post with Image  -->
-<div class="flex flex-col space-y-4 bg-gray-50 p-4 rounded-lg shadow-lg px-6 md:mx-10 my-4">
-  <div class="flex items-center space-x-4">
-    <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile picture">
-    <div class="ml-2 space-x-3">
-      <span class="text-con-black text-lg">John Doe</span>
-      <span class="text-gray-400 text-sm">2 hours ago</span>
-    </div>
-  </div>
-  <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, sint. Repellendus, blanditiis!</p>
-  <img src="https://via.placeholder.com/300x150" alt="Post image" class="rounded-lg shadow-lg">
-  <div class="flex items-center space-x-4 text-gray-600">
-    <button class="flex items-center space-x-1 focus:outline-none" id="like_3">
-      <i class="fas fa-thumbs-up"></i>
-      <span>42</span>
-    </button>
-    <button class="flex items-center space-x-1 focus:outline-none" id="com_3">
-      <i class="fas fa-comment"></i>
-      <span>8</span>
-    </button>
-    <button [matMenuTriggerFor]="menu" class="flex items-center space-x-1 focus:outline-none">
-      <i class="fas fa-share-nodes"></i>
-    </button>
-    <mat-menu #menu="matMenu" class="text-base">
-      <button mat-menu-item>Share with Whatsapp <i class="fa-brands fa-whatsapp pl-1 text-base text-green-500"></i> </button>
-      <button mat-menu-item>Share with Facebook <i class="fa-brands fa-facebook pl-1 text-base text-blue-500"></i> </button>
-      <button mat-menu-item>Share with Telegram <i class="fa-brands fa-telegram pl-1 text-base text-blue-300"></i> </button>
-    </mat-menu>
-  </div>
-  <div class="hidden mt-4" id="comment-section_3">
-    <form>
-      <textarea class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none text-gray-700 py-2 px-4 leading-5 resize-none" rows="4" placeholder="Add a comment"></textarea>
-      <button type="button" class="bg-con-darker-purple hover:bg-con-bright-purple text-white font-medium py-2 px-4 rounded-md mt-2 duration-200">
-        Submit
+      <button [matMenuTriggerFor]="menu" class="flex items-center space-x-1 focus:outline-none">
+        <i class="fas fa-share-nodes"></i>
       </button>
-    </form>
-    <div class="flex flex-col justify-start items-start text-base">
-      <app-comment-list></app-comment-list>
+      <mat-menu #menu="matMenu" class="text-base">
+        <button mat-menu-item>Share with Whatsapp <i class="fa-brands fa-whatsapp pl-1 text-base text-green-500"></i> </button>
+        <button mat-menu-item>Share with Facebook <i class="fa-brands fa-facebook pl-1 text-base text-blue-500"></i> </button>
+        <button mat-menu-item>Share with Telegram <i class="fa-brands fa-telegram pl-1 text-base text-blue-300"></i> </button>
+      </mat-menu>
+    </div>
+    <div class="hidden mt-4" id="comment-section_1">
+      <form>
+        <textarea class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none text-gray-700 py-2 px-4 leading-5 resize-none" rows="4" placeholder="Add a comment"></textarea>
+        <button type="button" class="bg-con-darker-purple hover:bg-con-bright-purple text-white font-medium py-2 px-4 rounded-md mt-2 duration-200">
+          Submit
+        </button>
+      </form>
+      <div class="flex flex-col justify-start items-start text-base">
+        <app-comment-list></app-comment-list>
+      </div>
     </div>
   </div>
+</ng-template>
+
+<div class="flex justify-center items-center mr-40">
+  <p class="text-gray-500 hover:cursor-pointer" (click)="load()">See more..</p>
 </div>
