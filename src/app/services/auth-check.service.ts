@@ -28,6 +28,13 @@ export class AuthCheckService {
     return roles;
   }
 
+  getIdFromToken(): string{
+    const token: string | null = localStorage.getItem('accessToken');
+    const tokenPayload: any = this.jwtHelper.decodeToken(token);
+    const id : string = tokenPayload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier']
+    return id;
+  }
+
   hasAdminRole(): boolean {
     const roles: string[] = this.getTokenRoles();
     return roles.includes('Admin');
