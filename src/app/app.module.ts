@@ -33,7 +33,7 @@ import { DialogModule } from './dialogs/dialog.module';
           },
         }),
         SocialLoginModule,
-        DialogModule
+        DialogModule,
     ],
     providers: [
       { provide: 'baseUrl', useValue: 'https://localhost:7134/api', multi: true },

@@ -54,6 +54,7 @@ export class UserService {
      return response;
   }
 
+
   async assignRoles(userId:string,roleType:string,success?:()=>void,error?:()=>void) {
    const obs : Observable<any> = this.httpClient.post({
         controller:"users",
@@ -84,14 +85,15 @@ export class UserService {
     return res;
   }
 
-  async getUserById(userId:string):Promise<UserOneResponse>{
+  async getUserById(userId:string,error?:()=>void):Promise<UserOneResponse>{
     const obs = this.httpClient.get({controller:"users",action:"user"},userId);
     const response : UserOneResponse = await firstValueFrom(obs) as UserOneResponse;
 
-    if(response.succeeded){
-      return response;
+    if(!response.succeeded){
+      error();
+      return null;
     }
-    return null;
+    return response;
   }
 
 }

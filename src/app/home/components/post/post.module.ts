@@ -4,6 +4,8 @@ import { PostCreateComponent } from './post-create/post-create.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { CommentModule } from "../comment/comment.module";
 import {MatMenuModule} from '@angular/material/menu'
+import { FileUploadModule } from 'src/app/services/common/file-upload/file-upload.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,8 +18,8 @@ import {MatMenuModule} from '@angular/material/menu'
         PostListComponent
     ],
     imports: [
-        CommonModule, MatMenuModule,
-        CommentModule
+        CommonModule, MatMenuModule,FormsModule,
+        CommentModule,FileUploadModule
     ]
 })
 export class PostModule { }

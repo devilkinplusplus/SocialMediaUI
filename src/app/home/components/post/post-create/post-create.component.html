@@ -4,10 +4,10 @@
       <div class="p-6">
         <!--? User Informations  -->
         <div class="flex items-center justify-start">
-          <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile picture">
+          <img class="h-10 w-10 rounded-full" [src]="url+user.profileImage" alt="Profile picture">
           <div class="ml-4 space-x-1 flex-col items-center">
-            <div class="text-xl text-con-black">John Doe</div>
-            <span class="text-gray-300 text-xs">@johndoe</span>
+            <div class="text-xl text-con-black">{{user.firstName}} {{user.lastName}}</div>
+            <span class="text-gray-300 text-xs">@{{user.userName}}</span>
           </div>
         </div>
 
@@ -20,13 +20,7 @@
           <!--? Buttons  -->
           <div class="flex justify-between items-center">
             <div class="flex items-center">
-              <label class="inline-flex items-center cursor-pointer">
-                <span class="text-gray-700 mr-2">Upload an image</span>
-                <input type="file" class="hidden" #txtFile id="fileInput">
-                <svg class="w-6 h-6 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M5 11h4v4H5v-4zm6-6h4v10h-4V5z"/>
-                </svg>
-              </label>
+              <app-file-upload [options]="fileUploadOptions"></app-file-upload>
               <span class="mx-4 text-gray-700 opacity-50">or</span>
               <label class="inline-flex items-center cursor-pointer">
                 <span class="text-gray-700 mr-2">Add a link</span>
@@ -35,7 +29,7 @@
                 </svg>
               </label>
             </div>
-            <button (click)="post(txtContent.value)"
+            <button (click)="post(txtContent.value)" type="submit"
               class="bg-con-darker-purple hover:bg-con-bright-purple text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline duration-300" type="button">
               Post
             </button>
