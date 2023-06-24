@@ -14,13 +14,13 @@
     </p>
     <img [src]="url+item.files" alt="Post image" class="rounded-lg shadow-lg max-w-lg h-auto" *ngIf="item.files.length > 0">
     <div class="flex items-center space-x-4 text-gray-600">
-      <button class="flex items-center space-x-1 focus:outline-none thumbs-up" [id]="item.userId" (click)="likePost(item.id,item.userId)">
+      <button class="flex items-center space-x-1 focus:outline-none thumbs-up" type="button" [id]="item.userId" (click)="likePost(item.id,item.userId)">
         <i class="fas fa-thumbs-up"></i>
         <span>{{item.likes}}</span>
       </button>
       <button class="flex items-center space-x-1 focus:outline-none comment" id="com_1">
         <i class="fas fa-comment"></i>
-        <span>8</span>
+        <span>0</span>
       </button>
       <button [matMenuTriggerFor]="menu" class="flex items-center space-x-1 focus:outline-none">
         <i class="fas fa-share-nodes"></i>

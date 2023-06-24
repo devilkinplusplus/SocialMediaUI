@@ -4,6 +4,7 @@ import { PostListResponse } from 'src/app/contracts/posts/postListResonse';
 import { Observable, first, firstValueFrom } from 'rxjs';
 import { LikeResponse } from 'src/app/contracts/posts/likeResponse';
 import { CreatePostDto, CreatePostResponse } from 'src/app/contracts/posts/createPost';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -37,22 +38,21 @@ export class PostService {
     return respone;
   }
 
-  async createPost(createPostDto:CreatePostDto,success?:()=>void,error?:()=>void):Promise<CreatePostResponse>{
+  async createPost(createPostDto:CreatePostDto,success?:()=>void,error?:()=>void){
     const obs : Observable<any | CreatePostResponse> = this.httpClient.post<any | CreatePostResponse>({
-      controller:"posts"
+      controller:"posts",
+      headers:  new HttpHeaders({ "responseType": "blob" })
     },{
-       createPostDto
+      createPostDto
     });
 
     const response : CreatePostResponse = await firstValueFrom(obs) as CreatePostResponse;
 
     if(response.succeeded){
       success();
-      return response;
     }
     else{
       error();
-      return null;
     }
   }
 
